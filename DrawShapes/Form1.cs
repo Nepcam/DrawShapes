@@ -19,14 +19,17 @@ namespace DrawShapes
 
         private void buttonDrawLine_Click(object sender, EventArgs e)
         {
+            // Creates the Graphics object and links it to the pictureBoxDisplay
             Graphics paper = pictureBoxDisplay.CreateGraphics();
-            Pen pen1 = new Pen(Color.Blue, 5);
-            Pen pen2 = new Pen(Color.Red, 5);
+            // Created Pen objects
+            Pen bluePen = new Pen(Color.Blue, 5);
+            Pen redPen = new Pen(Color.Red, 5);
 
-            paper.DrawLine(pen1, 10, 10, 100, 100);
-            paper.DrawLine(pen2, 200, 200, 400, 400);
+            // Created a DrawLine object and combined the paper and Pen objects
+            paper.DrawLine(bluePen, 10, 10, 100, 100);
+            paper.DrawLine(redPen, 200, 200, 400, 400);
         }
-
+        // Closes the application 
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -35,15 +38,15 @@ namespace DrawShapes
         private void buttonDrawSquare_Click(object sender, EventArgs e)
         {
             Graphics paper = pictureBoxDisplay.CreateGraphics();
-            Pen pen1 = new Pen(Color.Blue, 5);
-            Pen pen2 = new Pen(Color.Red, 5);
-            Pen pen3 = new Pen(Color.Green, 5);
-            Pen pen4 = new Pen(Color.Black, 5);
+            Pen bluePen = new Pen(Color.Blue, 5);
+            Pen redPen = new Pen(Color.Red, 5);
+            Pen greenPen = new Pen(Color.Green, 5);
+            Pen blackPen = new Pen(Color.Black, 5);
 
-            paper.DrawLine(pen1, 10, 10, 10, 100);
-            paper.DrawLine(pen2, 10, 100, 100, 100);
-            paper.DrawLine(pen3, 100, 100, 100, 10);
-            paper.DrawLine(pen4, 100, 10, 10, 10);
+            paper.DrawLine(bluePen, 10, 10, 10, 100);
+            paper.DrawLine(redPen, 10, 100, 100, 100);
+            paper.DrawLine(greenPen, 100, 100, 100, 10);
+            paper.DrawLine(blackPen, 100, 10, 10, 10);
 
         }
     }
